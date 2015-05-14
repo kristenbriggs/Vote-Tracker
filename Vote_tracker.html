@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="vote_tracker.button.css"/>
 </head>
 
+<main>
 <body>
   <div id="header">
     <h1><a href="#">
@@ -16,16 +17,18 @@
     <a href="#">
       <span class="whoweareicon">IS</span></a>
     <a href="#">
-      <span class="whoweareicon">ART!!</span></a></h1></a>
-    <h3><strong>Vote for which food you would rather eat.  The pie chart will show how popular the item is.  Vote again; more foods will appear!</strong></h3></div>
+      <span class="whoweareicon">ART!!</span></a></h1>
+    <h3>Vote for which food you would rather eat.  The pie chart will show how popular the item is.  Vote again; more foods will appear!</h3>
+  </div>
 
     <section class="container">
-        <div class="flex-box">
+         <div class="flex-box">
             <p id="Food1"></p>
-        </div>
+         </div>
         <div class="flex-box">
-            <canvas id="foods" width="150" height="150"></canvas>
-        </div>
+            <canvas id="leftImage" width="150" height="150"></canvas>
+<!--             <canvas id="rightImage" width="150" height="150"></canvas>
+ -->        </div>
         <div class="flex-box">
             <p id="Food2"></p>
         </div>
@@ -37,6 +40,6 @@
  <script src="Vote_tracker.events.js"></script>
 
 
-</main>
 </body>
+</main>
 </html>

@@ -1,14 +1,16 @@
-document.addEventListener("DOMContentLoad", function()  {
-    var images = [];
-    var chart;
-    var imagePaths = ["Burger.jpg", "Hot_dog.jpg", "Olives.jpg", "Paella.jpg", "Pancakes.jpg", "Pizza.gif", "Salad.jpg", "Salmon.jpeg", "Shrimp.jpg", "Soup.jpg", "Stir_fry.jpg", "Sushi.jpg", "Tacos.jpg", "Watermelon.jpg", "Fruits_and_veggies.jpg"];
-    var Photo = function(url)  {
-        this.url = 'img/' + url;
-        this.votes = 0;
-    };
+var images = [];
+var chart;
+var imagePaths = ["Burger.jpg", "Hot_dog.jpg", "Olives.jpg", "Paella.jpg", "Pancakes.jpg", "Pizza.gif", "Salad.jpg", "Salmon.jpeg", "Shrimp.jpg", "Soup.jpg", "Stir_fry.jpg", "Sushi.jpg", "Tacos.jpg", "Watermelon.jpg", "Fruits_and_veggies.jpg"];
+var Photo = function(url)  {
+    this.url = 'img/' + url;
+    this.votes = 0;
+};
+
+    document.addEventListener("DOMContentLoad", function()  {
+
     imagePaths.forEach(function(image)  {
         images.push(new Photo(image));
-    })
+    });
 });
 
 // imagePaths.forEach(function(image)  {
@@ -18,11 +20,19 @@ var Tracker = {
     leftVotes: 0,
     rightVotes: 0,
     randomImage: function()  {
-        return images[Math.floor(Math.random() * images.length)];
-    },
+        //return
+        var img1 = images[Math.floor(Math.random() * images.length)];
+        $.ajax({
+          url: "http://localhost:8080/",
+          context: document.body
+      }).done(function() {
+          $( this ).addClass( "done" );
+      });
+  },
     newImages: function()  {
         var leftImage = document.getElementById("leftImage");
-        var rightImage = document.getElementById("rightImage");
+        //var rightImage = document.getElementById("rightImage");
+        //console.log(this);
         var newLeftImage = this.randomImage();
         var newRightImage = this.randomImage();
         while(newLeftImage === newRightImage)  {
@@ -32,7 +42,7 @@ var Tracker = {
         rightImage.innerHTML = '<img src= "' + newRightImage.url + '" />';
     },
     voteLeft: function()  {
-        this.leftVotes++
+        this.leftVotes++;
         var LeftScore = document.getElementById('LeftScore');
         leftScore.textContent = this.leftVotes;
     },
@@ -48,7 +58,7 @@ var Tracker = {
 
 var scoreChart = document.getElementById('foods').getContext('2d');
 var pieData = [
-  {
+{
     value: 300,
     color:"#F7464A",
     highlight: "#FF5A5E",
@@ -62,12 +72,15 @@ var pieData = [
 }
 ];
 var pieOptions = {
-    segmentShowStroke: false,
-    animateScale: false
-};
-chart = new Chart(scoreChart).Pie(pieData, pieOptions);
-Tracker.newImages();
-window.Tracker = Tracker;
+        segmentShowStroke: false,
+        animateScale: false
+    };
+
+
+    //chart = new Chart(scoreChart).Pie(pieData, pieOptions);
+    Tracker.newImages();
+    window.Tracker = Tracker;
+// });
 
 
 
