@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Who doesn\'t like kittens?</title>
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="jquery.js"></script>
+  <script src="ajax.js"></script>
+  <script src="Kittens.js"></script>
+  <script src="Chart.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1><a href="#">
+            <span class="whoweareicon">Kitten</span></a>
+          <a href="#">
+            <span class="whoweareicon">Competition!</span></a></h1>
+      <p>Choose a kitten to <span class="intimidate">crush</span> the competition!</p>
+    </header>
+    <section id="voting-box">
+      <div id="choice1" class="choice-box1">
+        <div id="photo-one"><p id="kitten1-name" class="intimidate">Kitten One Name</p><img id="photo1" src=""></div>
+        <p id="button1-wrap" class="showthis"><button id="choose1">Cutest!</button></p>
+        <p id="one-wins" class="blink hidethis">WINNER</p>
+        <p id="tie2" class="blink hidethis">It's a TIE!</p>
+      </div>
+      <div id="chart-area">
+      <canvas id="myChart" width="200" height="200"></canvas>
+      <p id="play-again-wrap"><button id="play-again" disabled>Keep Voting</button></p>
+      </div>
+      <div  id="choice2" class="choice-box2">
+        <div id="photo-two"><p id="kitten2-name" class="intimidate">Kitten Two Name</p><img id="photo2" src=""></div>
+        <p id="button2-wrap" class="showthis"><button id="choose2" class="showthis">Cutest!</button></p>
+        <p id="two-wins" class="blink hidethis">WINNER</p>
+        <p id="tie1" class="blink hidethis">It's a TIE!</p>
+      </div>
+    </section>
+    <footer>
+      <p id="vote-count"></p>
+    </footer>
+  </main>
+</body>
+</html>
