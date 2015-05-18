@@ -20,7 +20,7 @@ $(function()  {
         headers:  {'Authorization': 'Client-ID f5b73f08e320402'}
     });
     .done(function(res)  {
-      images = res.data.images;
+      images = res.data.images
       renderImages(images);
       kittenCompetition();
   });

@@ -57,13 +57,13 @@ var kittenCompetition = function()  {
                 var myDoughnutChart = new Chart(ctx).Doughnut(data);
             };
 
-            var blankChart = function()  {
+    var blankChart = function()  {
                 var canvas = document.getElementById('myChart');
                 var ctx = myChart.getContext('2d');
                 ctx.clearRect(0,0,200,200);
             };
 
-            var voteFor = function(event)  {
+    var voteFor = function(event)  {
                 event.preventDefault();
                 kittens[kittenNumber1].votes++;
                 if (kittens[kittenNumber1].votes > kittens[kittenNumber2].votes) {
@@ -87,44 +87,44 @@ var kittenCompetition = function()  {
 
             };
 
-            var el = $('#button1-wrap');
+    var el = $('#button1-wrap');
             el.attr('class', 'hidethis');
-            var el = $('#button2-wrap');
+    var el = $('#button2-wrap');
             el.attr('class', 'hidethis');
-            var el = $('#play-again');
+    var el = $('#play-again');
             el.prop('disabled', false);
-            var el = $('#vote-count');
+    var el = $('#vote-count');
             makeChart();
 
-        var voteAgain = function(event)  {
-            event.preventDefault();
-            blankChart();
-            var el = $('#button1-wrap');
-            el.attr('class', 'showthis');
-            var el = $('#button2-wrap');
-            el.attr('class', 'showthis');
-            var el = $('#one-wins');
-            el.attr('class', 'hidethis blink');
-            var el = $('#two-wins');
-            el.attr('class', 'hidethis blink');
-            var el = $('#tie1');
-            el.attr('class', 'hidethis blink');
-            var el = $('#tie2');
-            el.attr('class', 'hidethis blink');
-            var el = $('#vote-count');
-            el.html('');
-            var el = $('#play-again');
-            el.prop('disabled', true);
-            pickKittens();
-        };
-        var votes = function()  {
-            console.log('im counting votes');
-            counter++
-            console.log(counter);
-        };
+    var voteAgain = function(event)  {
+                event.preventDefault();
+                blankChart();
+                var el = $('#button1-wrap');
+                el.attr('class', 'showthis');
+                var el = $('#button2-wrap');
+                el.attr('class', 'showthis');
+                var el = $('#one-wins');
+                el.attr('class', 'hidethis blink');
+                var el = $('#two-wins');
+                el.attr('class', 'hidethis blink');
+                var el = $('#tie1');
+                el.attr('class', 'hidethis blink');
+                var el = $('#tie2');
+                el.attr('class', 'hidethis blink');
+                var el = $('#vote-count');
+                el.html('');
+                var el = $('#play-again');
+                el.prop('disabled', true);
+                pickKittens();
+            };
+    var votes = function()  {
+                console.log('im counting votes');
+                counter++
+                console.log(counter);
+            };
 
-        pickKittens();
-        $('#choose1').click(voteFor);
-        $('#choose2').click(voteFor);
-        $('#play-again').click(voteAgain);
-    };
+            pickKittens();
+            $('#choose1').click(voteFor);
+            $('#choose2').click(voteFor);
+            $('#play-again').click(voteAgain);
+        };
