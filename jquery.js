@@ -1233,6 +1233,15 @@ setDocument = Sizzle.setDocument = function( node ) {
       div.querySelectorAll("*,:x");
       rbuggyQSA.push(",.*:");
     });
+<<<<<<< HEAD
+    var Kc = a.jQuery,
+        Lc = a.$;
+    return n.noConflict = function(b) {
+        return a.$ === n && (a.$ = Lc), b && a.jQuery === n && (a.jQuery = Kc), n
+    }, typeof b === U && (a.jQuery = a.$ = n), n
+});
+/* jquery.js file to add for assignment.
+=======
   }
 
   if ( (support.matchesSelector = rnative.test( (matches = docElem.matches ||
@@ -9203,3 +9212,4 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
+>>>>>>> af6e292aca80b294a8c07066f2b1c1ebd309c961

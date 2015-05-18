@@ -128,3 +128,18 @@ var kittenCompetition = function()  {
             $('#choose2').click(voteFor);
             $('#play-again').click(voteAgain);
         };
+<<<<<<< HEAD
+        var votes = function()  {
+            console.log('im counting votes');
+            counter++
+            console.log(counter);
+        };
+
+        pickKittens();
+        $('#choose1').click(voteFor);
+        $('#choose2').click(voteFor);
+        $('#play-again').click(voteAgain);
+    };
+    //First used jquery in lines 7-9.
+=======
+>>>>>>> af6e292aca80b294a8c07066f2b1c1ebd309c961
