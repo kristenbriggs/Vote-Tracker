@@ -29,3 +29,4 @@ $(function()  {
     });
 
 })
+//renderImages(images);  Since completing this assignment in the early hours of May 18, asynch request hasn't returned in time for submission.  Thus, the "call" here won't work yet.
