@@ -3090,3 +3090,4 @@
         return a.$ === n && (a.$ = Lc), b && a.jQuery === n && (a.jQuery = Kc), n
     }, typeof b === U && (a.jQuery = a.$ = n), n
 });
+/* jquery.js file to add for assignment.

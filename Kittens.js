@@ -128,3 +128,4 @@ var kittenCompetition = function()  {
         $('#choose2').click(voteFor);
         $('#play-again').click(voteAgain);
     };
+    //First used jquery in lines 7-9.
